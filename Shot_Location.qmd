@@ -1,0 +1,50 @@
+---
+title: "Shot Location"
+format: html
+execute:
+  warning: false
+  message: false
+  echo: false
+---
+
+```{r}
+library(tidyverse)
+library(tutorial.helpers)
+library(dplyr)
+```
+
+```{r}
+# Read the CSV file
+NHL_data <- read_csv("NHL_shots_2010_2018_regseason.csv")
+
+# Calculate shots missed, shots saved, and shots scored
+NHL_data <- NHL_data |>
+  mutate(shots_saved = shots - (missedShots + goals),
+         shots_scored = goals, 
+         shots_t = (missedShots + shots_scored + shots_saved)) |> 
+  filter(missedShots >= 0, shots_saved >= 0, shots_scored >= 0, shots >= 0)
+
+# Gather data for plotting using pivot_longer
+NHL_data_plot <- NHL_data |>
+  select(playerPositionCode, shots_t, missedShots, shots_saved, shots_scored) |>
+  pivot_longer(cols = c(shots_t, missedShots, shots_saved, shots_scored),
+               names_to = "variable", values_to = "value")
+
+# Plotting using ggplot
+
+
+```
+
+```{r}
+ggplot(NHL_data_plot, aes(x = playerPositionCode, y = value, fill = variable)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 1) +
+  labs(x = "Player Position", y = "Number of Shots", fill = "Category") +
+  scale_fill_manual(values = c("shots_t" = "#1f77b4", "missedShots" = "#ff7f0e", 
+                               "shots_saved" = "#2ca02c", "shots_scored" = "#d62728"),
+                    labels = c("Shots Missed", "Shots Saved", "Shots Scored", "Shots")) +
+  ggtitle("NHL Players' Shot Statistics by Position (2010-2018)") +
+  labs(subtitle = "Data is Incomplete") +
+  theme_minimal() + 
+  theme()
+cat("\014")
+```

@@ -1,0 +1,26 @@
+---
+title: "Affect Of Draft Year On Goals"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(tidyverse)
+library(tutorial.helpers)
+library(dplyr)
+```
+
+```{r}
+NHL_data <- read_csv("NHL_shots_2010_2018_regseason.csv")
+NHL_data_plot <- NHL_data |> summarize(playerDraftYear, goals)
+```
+
+```{r}
+NHL_data_plot |> ggplot(aes(x = playerDraftYear, y = goals)) + 
+  geom_point(alpha = 0.05) + 
+  scale_color_gradient(low = "blue", high = "red") + 
+  theme_minimal() + 
+  labs(x = "Year Drafted", y = "Goals Scored", subtitle = "Graph is more concentrated on the right as this is between the 2010 - 2018 seasons and many had passed their prime or retired", title = "Goals in Between the 2010 and 2018 Seasons Based off Year Drafted")
+```

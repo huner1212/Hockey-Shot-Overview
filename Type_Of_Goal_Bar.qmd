@@ -1,0 +1,38 @@
+---
+title: "Type of Goal"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(tidyverse)
+library(tutorial.helpers)
+library(dplyr)
+```
+
+```{r}
+NHL_data <- read_csv("NHL_shots_2010_2018_regseason.csv")
+NHL_data_plot <- NHL_data |> summarize(goalsBackhand, goalsDeflected, goalsSnap, goalsSlap, goalsTipped, goalsWraparound, goalsWrist) |> 
+   pivot_longer(cols = everything(), names_to = "GoalType", values_to = "Count")
+```
+
+```{r}
+NHL_data_plot |> ggplot(aes(x = GoalType, y = Count, fill = GoalType)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Total Goals by Type (2010-2018 Regular Season)", x = "Type of Goal", y = "Total Goals", subtitle = "Most Goals are from a Wristshot") +
+  scale_fill_manual(values = c(
+      goalsBackhand = "blue",
+      goalsDeflected = "orange",
+      goalsSnap = "green",
+      goalsSlap = "red",
+      goalsTipped = "purple",
+      goalsWraparound = "yellow",
+      goalsWrist = "cyan"),
+    name = "Goal Type",
+    labels = c("Backhand Goals", "Deflected Goals", "Snapshot Goals", "Slapshot Goals", "Tipped Goals", "Wraparound Goals", "Wristshot Goals")) + 
+  theme_minimal() + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(), panel.background = element_blank()) 
+```
