@@ -1,0 +1,17 @@
+{
+  "hash": "4bb70e91db81048d86e41fd85bf8de24",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Type of Goal\"\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](Type_Of_Goal_Bar_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "Type_Of_Goal_Bar_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
