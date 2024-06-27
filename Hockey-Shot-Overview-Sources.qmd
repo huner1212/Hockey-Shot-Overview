@@ -3,5 +3,6 @@ title: "Sources"
 format: html
 ---
 
-https://chatgpt.com/
+https://chatgpt.com/                                              
+
 https://www.kaggle.com/datasets/maddran/nhl-shots-by-type-20112018

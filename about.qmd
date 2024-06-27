@@ -1,6 +1,8 @@
 ---
 title: "About"
 ---
-This site contains several graphs analyzing hockey data
-Github: 
+This site contains several graphs analyzing hockey data      
+                                                            
+Github:                                                  
+                                                                
 https://github.com/huner1212/Hockey-Shot-Overview
