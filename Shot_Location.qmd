@@ -1,5 +1,5 @@
 ---
-title: "Shot Location"
+title: "Shots By Position"
 format: html
 execute:
   warning: false
@@ -17,7 +17,7 @@ library(dplyr)
 # Read the CSV file
 NHL_data <- read_csv("NHL_shots_2010_2018_regseason.csv")
 
-# Calculate shots missed, shots saved, and shots scored
+# Calculate shots missed, shots saved, and shots scored while removing innacurate data
 NHL_data <- NHL_data |>
   mutate(shots_saved = shots - (missedShots + goals),
          shots_scored = goals, 
@@ -30,12 +30,10 @@ NHL_data_plot <- NHL_data |>
   pivot_longer(cols = c(shots_t, missedShots, shots_saved, shots_scored),
                names_to = "variable", values_to = "value")
 
-# Plotting using ggplot
-
-
 ```
 
 ```{r}
+# Plotting using ggplot
 ggplot(NHL_data_plot, aes(x = playerPositionCode, y = value, fill = variable)) +
   geom_bar(stat = "identity", position = "dodge", alpha = 1) +
   labs(x = "Player Position", y = "Number of Shots", fill = "Category") +

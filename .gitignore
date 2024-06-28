@@ -3,4 +3,8 @@
 .RData
 .Ruserdata
 
+
 /.quarto/
+*Rproj
+/_file
+*rsconnect

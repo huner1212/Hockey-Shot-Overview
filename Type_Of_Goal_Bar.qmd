@@ -13,12 +13,14 @@ library(dplyr)
 ```
 
 ```{r}
+# created dataset and used pivot longer so that it could be grouped
 NHL_data <- read_csv("NHL_shots_2010_2018_regseason.csv")
 NHL_data_plot <- NHL_data |> summarize(goalsBackhand, goalsDeflected, goalsSnap, goalsSlap, goalsTipped, goalsWraparound, goalsWrist) |> 
    pivot_longer(cols = everything(), names_to = "GoalType", values_to = "Count")
 ```
 
 ```{r}
+# created bar graph and removed unnecesary elements
 NHL_data_plot |> ggplot(aes(x = GoalType, y = Count, fill = GoalType)) + 
   geom_bar(stat = "identity") +
   labs(title = "Total Goals by Type (2010-2018 Regular Season)", x = "Type of Goal", y = "Total Goals", subtitle = "Most Goals are from a Wristshot") +

@@ -11,13 +11,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site contains several graphs analyzing hockey data\nGithub:\nhttps://github.com/huner1212/Hockey-Shot-Overview"
+    "text": "This site contains several graphs analyzing hockey data. These graphs are about, the amount of each type of shot that resulted in a goal, the position of the player on the outcome of the shot, and the year drafted into the NHL on a players total goals.\nGithub:\nhttps://github.com/huner1212/Hockey-Shot-Overview\nEmail:\nHockeyhunter21@gmail.com\nCourse Homepage:\nhttps://bootcamp.davidkane.info/"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Hockey Shot Analysis",
+    "title": "Hockey Data Analysis",
     "section": "",
-    "text": "Go on to the following pages to view many different graphs about hockey."
+    "text": "In the sport of Hockey there are a multitude of different factors that drastically change the outcome of a shot. The goal of this overview was to analyze Hockey shots/goals to understand the impact of the various factors surrounding them such as the position the player plays or what type of shot they took. I pulled data containing the 2010-2018 regular seasons from Kaggle and manipulated it to be able to better show the effect of these factors on the outcome of a shot. After seeing these graphs I hope that it will be able to better demonstrate how different factors can have a major impact on the outcome of each shot."
   }
 ]

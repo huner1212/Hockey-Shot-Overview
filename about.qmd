@@ -1,8 +1,16 @@
 ---
 title: "About"
 ---
-This site contains several graphs analyzing hockey data      
+This site contains several graphs analyzing hockey data. These graphs are about, the amount of each type of shot that resulted in a goal, the position of the player on the outcome of the shot, and the year drafted into the NHL on a players total goals.     
                                                             
-Github:                                                  
+Github:                                                        
                                                                 
-https://github.com/huner1212/Hockey-Shot-Overview
+https://github.com/huner1212/Hockey-Shot-Overview                    
+                                                                     
+Email:                                                            
+                                                       
+Hockeyhunter21@gmail.com                                                            
+                                                                 
+Course Homepage:
+                                                                 
+https://bootcamp.davidkane.info/

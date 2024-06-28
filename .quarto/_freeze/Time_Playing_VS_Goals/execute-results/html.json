@@ -1,8 +1,8 @@
 {
-  "hash": "93e2c712f98f7389f70fd014257538b6",
+  "hash": "8314baff5e4b513e11c7751aa66351c8",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Affect Of Draft Year On Goals\"\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](Time_Playing_VS_Goals_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::",
+    "markdown": "---\ntitle: \"Affect Of Draft Year On Goals\"\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](Time_Playing_VS_Goals_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
     "supporting": [
       "Time_Playing_VS_Goals_files"
     ],
